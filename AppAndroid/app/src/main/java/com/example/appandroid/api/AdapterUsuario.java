@@ -12,6 +12,7 @@ import com.example.appandroid.R;
 
 public class AdapterUsuario extends RecyclerView.Adapter<AdapterUsuario.ViewHolder>{
     private Usuario[] dsUsuario;
+    private ItemClickListener mItemListener;
 
     @NonNull
     @Override
@@ -27,6 +28,10 @@ public class AdapterUsuario extends RecyclerView.Adapter<AdapterUsuario.ViewHold
     public void onBindViewHolder(@NonNull AdapterUsuario.ViewHolder viewHolder, int i) {
         viewHolder.tvUsuario.setText(dsUsuario[i].getName());
         viewHolder.tvEmail.setText(dsUsuario[i].getEmail());
+
+        viewHolder.itemView.setOnClickListener(view -> {
+            mItemListener.onItemClick(dsUsuario[i]);
+        });
     }
 
     @Override
@@ -44,8 +49,13 @@ public class AdapterUsuario extends RecyclerView.Adapter<AdapterUsuario.ViewHold
         }
     }
 
-    public AdapterUsuario(Usuario [] listaDeUsuarios) {
+    public AdapterUsuario(Usuario [] listaDeUsuarios, ItemClickListener itemClickListener) {
         this.dsUsuario=listaDeUsuarios;
+        this.mItemListener = itemClickListener;
+    }
+
+    public interface ItemClickListener{
+        void onItemClick(Usuario usuario);
     }
 
 }

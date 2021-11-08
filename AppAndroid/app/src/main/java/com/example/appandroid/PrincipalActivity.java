@@ -9,6 +9,11 @@ import android.os.Bundle;
 
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.appandroid.api.AdapterUsuario;
 import com.example.appandroid.api.Datos;
@@ -67,7 +72,12 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Datos> call, Response<Datos> response) {
                 Usuario[] arrayUsuarios=response.body().getData();
-                adapterUsuario=new AdapterUsuario(arrayUsuarios);
+                adapterUsuario=new AdapterUsuario(arrayUsuarios, new AdapterUsuario.ItemClickListener() {
+                    @Override
+                    public void onItemClick(Usuario usuario) {
+                        showToast(usuario.getName());
+                    }
+                });
                 rvUsuarios.setAdapter(adapterUsuario);
             }
 
@@ -77,4 +87,9 @@ public class PrincipalActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void showToast(String message){
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
 }
