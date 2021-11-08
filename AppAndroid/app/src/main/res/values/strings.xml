@@ -8,4 +8,7 @@
     <string name="estado">Estado</string>
     <string name="genero">Género</string>
     <string name="agregar">Agregar</string>
+    <string name="paciente">Pacientes</string>
+    <string name="reserva">Reservas</string>
+    <string name="ficha">Fichas</string>
 </resources>

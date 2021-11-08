@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public void btnEventoIngresar(View v) {
         if (usuario.getText().toString().equalsIgnoreCase("admin")
         && password.getText().toString().equalsIgnoreCase("123")) {
-            Intent principalIntent=new Intent(this, PrincipalActivity.class);
+            Intent principalIntent=new Intent(this, SelectActivity.class);
             Bundle bundle=new Bundle();
             bundle.putString("usuario",usuario.getText().toString());
             principalIntent.putExtras(bundle);
