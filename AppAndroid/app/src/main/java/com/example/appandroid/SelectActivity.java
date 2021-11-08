@@ -31,7 +31,7 @@ public class SelectActivity extends AppCompatActivity {
     }
 
     public void btnEventoAdministracionPacientes(View v) {
-            Intent principalIntent=new Intent(this, PrincipalActivity.class);
+            Intent principalIntent=new Intent(this, PacientesActivity.class);
             startActivity(principalIntent);
     }
 
