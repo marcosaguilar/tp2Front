@@ -31,14 +31,14 @@ public class PacientesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paciente);
         rvPacientes=findViewById(R.id.rvListadoPacientes);
-        //fabNuevoPaciente=findViewById(R.id.fabNuevoPaciente);
-        /*fabNuevoPaciente.setOnClickListener(new View.OnClickListener() {
+        fabNuevoPaciente=findViewById(R.id.fabNuevoPaciente);
+        fabNuevoPaciente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newUserIntent=new Intent(PacientesActivity.this, NewUserActivity.class);
-                startActivity(newUserIntent);
+                Intent newPacienteIntent=new Intent(PacientesActivity.this, NewPacienteActivity.class);
+                startActivity(newPacienteIntent);
             }
-        });*/
+        });
         LinearLayoutManager layoutManager=new LinearLayoutManager(this);
         rvPacientes.setLayoutManager(layoutManager);
         cargarPacientes();

@@ -13,6 +13,7 @@
         android:theme="@style/Theme.AppAndroid"
         android:usesCleartextTraffic="true">
         <activity android:name=".NewUserActivity"></activity>
+        <activity android:name=".NewPacienteActivity"></activity>
         <activity android:name=".PrincipalActivity" />
         <activity android:name=".PacientesActivity" />
         <activity android:name=".SelectActivity" />

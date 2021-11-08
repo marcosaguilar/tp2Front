@@ -11,4 +11,11 @@
     <string name="paciente">Pacientes</string>
     <string name="reserva">Reservas</string>
     <string name="ficha">Fichas</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="telefono">Telefono</string>
+    <string name="ruc">Ruc</string>
+    <string name="cedula">Cedula</string>
+    <string name="tipoPersona">Tipo Persona</string>
+    <string name="fechaNacimiento">Fecha de Nacimiento</string>
 </resources>
