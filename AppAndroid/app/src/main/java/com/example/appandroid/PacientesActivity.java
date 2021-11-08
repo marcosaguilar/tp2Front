@@ -70,6 +70,8 @@ public class PacientesActivity extends AppCompatActivity {
                 adapterPaciente=new AdapterPaciente(arrayPacientes, new AdapterPaciente.ItemClickListener() {
                     @Override
                     public void onItemClick(Paciente paciente) {
+                        //ir a la pagina con los datos del paciente cargado y dos botones,
+                        // uno modificar y otro eliminar (no se si para el caso de pacientes)
                         showToast(paciente.getNombre());
                     }
                 });

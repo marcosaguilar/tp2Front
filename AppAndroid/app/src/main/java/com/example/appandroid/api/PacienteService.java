@@ -1,10 +1,13 @@
 package com.example.appandroid.api;
 
+import android.net.Uri;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+
 
 public interface PacienteService {
     @Headers({
@@ -12,6 +15,13 @@ public interface PacienteService {
     })
     @GET("stock-nutrinatalia/persona")
     Call<DatosPaciente> obtenerPacientes();
+
+    @Headers({
+            "Accept: application/json"
+    })
+
+    @GET("stock-nutrinatalia/persona?ejemplo=%7B%22soloUsuariosDelSistema%22%3Atrue%7D")
+    Call<DatosPaciente> obtenerUsuariosLogin();
 
     @Headers({
             "Accept: application/json",
