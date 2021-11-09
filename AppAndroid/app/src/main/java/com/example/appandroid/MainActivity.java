@@ -3,6 +3,7 @@ package com.example.appandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     public void btnEventoIngresar(View v) {
         for (int i=0;i<lista.length;i++) {
 
-            System.out.println(lista[i]);
+            //System.out.println(lista[i]);
             if(lista[i].getNombre().equalsIgnoreCase(usuario.getText().toString())
                     && password.getText().toString().equalsIgnoreCase("123")){
                 error = false;
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cargarUsuariosLogin() {
-        Call<DatosPaciente> callApi= PacienteUtil.getPacienteService().obtenerUsuariosLogin();
+        Call<DatosPaciente> callApi= PacienteUtil.getPacienteService().obtenerUsuariosLogin(Uri.encode("{\"soloUsuariosDelSistema\":true}"));
         callApi.enqueue(new Callback<DatosPaciente>() {
             @Override
             public void onResponse(Call<DatosPaciente> call, Response<DatosPaciente> response) {
