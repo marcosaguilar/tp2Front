@@ -22,6 +22,7 @@ import retrofit2.Response;
 
 
 public class PacientesActivity extends AppCompatActivity {
+    String value;
     private RecyclerView rvPacientes;
     private AdapterPaciente adapterPaciente;
     private FloatingActionButton fabNuevoPaciente;
@@ -29,6 +30,7 @@ public class PacientesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        value = getIntent().getExtras().getString("consulta");
         setContentView(R.layout.activity_paciente);
         rvPacientes=findViewById(R.id.rvListadoPacientes);
         fabNuevoPaciente=findViewById(R.id.fabNuevoPaciente);
@@ -62,7 +64,7 @@ public class PacientesActivity extends AppCompatActivity {
     }
 
     public void cargarPacientes() {
-        Call<DatosPaciente> callApi= PacienteUtil.getPacienteService().obtenerPacientes();
+        Call<DatosPaciente> callApi= PacienteUtil.getPacienteService().obtenerPacientesFiltro(value);
         callApi.enqueue(new Callback<DatosPaciente>() {
             @Override
             public void onResponse(Call<DatosPaciente> call, Response<DatosPaciente> response) {

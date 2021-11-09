@@ -23,6 +23,12 @@ public interface PacienteService {
     @GET("stock-nutrinatalia/persona")
     Call<DatosPaciente> obtenerPacientes();
 
+    @Headers({
+            "Accept: application/json"
+    })
+    @GET("stock-nutrinatalia/persona?")
+    Call<DatosPaciente> obtenerPacientesFiltro(@Query(value = "ejemplo" ,encoded = true) String address);
+
     /*@Headers({
             "Accept: application/json"
     })

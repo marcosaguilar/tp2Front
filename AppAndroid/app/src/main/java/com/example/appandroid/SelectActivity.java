@@ -34,7 +34,7 @@ public class SelectActivity extends AppCompatActivity {
 
     public void btnEventoAdministracionPacientes(View v) {
             System.out.println("el valor es: " + value);
-            Intent principalIntent=new Intent(this, PacientesActivity.class);
+            Intent principalIntent=new Intent(this, FiltroPacienteActivity.class);
             startActivity(principalIntent);
     }
 

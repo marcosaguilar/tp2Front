@@ -18,4 +18,5 @@
     <string name="cedula">Cedula</string>
     <string name="tipoPersona">Tipo Persona</string>
     <string name="fechaNacimiento">Fecha de Nacimiento</string>
+    <string name="filtrar">Filtrar</string>
 </resources>
