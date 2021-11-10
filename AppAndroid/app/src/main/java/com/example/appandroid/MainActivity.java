@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -43,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
         for (int i=0;i<lista.length;i++) {
 
             //System.out.println(lista[i]);
-            if(lista[i].getNombre().equalsIgnoreCase(usuario.getText().toString())
+            if(lista[i].getUsuarioLogin().equalsIgnoreCase(usuario.getText().toString())
                     && password.getText().toString().equalsIgnoreCase("123")){
                 error = false;
                 Intent principalIntent=new Intent(this, SelectActivity.class);
                 Bundle bundle=new Bundle();
-                bundle.putString("usuario",usuario.getText().toString());
+                bundle.putString("user",usuario.getText().toString());
                 principalIntent.putExtras(bundle);
                 startActivity(principalIntent);
                 break;

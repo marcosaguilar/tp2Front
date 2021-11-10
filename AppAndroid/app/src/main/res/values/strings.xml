@@ -19,4 +19,8 @@
     <string name="tipoPersona">Tipo Persona</string>
     <string name="fechaNacimiento">Fecha de Nacimiento</string>
     <string name="filtrar">Filtrar</string>
+    <string name="agregarEmpleado">Agregar Empleado</string>
+    <string name="agregarCliente">Agregar Cliente</string>
+    <string name="fecha">Fecha</string>
+    <string name="buscarHora">Buscar Hora</string>
 </resources>

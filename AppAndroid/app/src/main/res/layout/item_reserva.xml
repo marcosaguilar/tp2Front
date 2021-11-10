@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="6dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="16sp"
+            android:lines="1"
+            android:textStyle="bold"
+            android:id="@+id/txtEmpleado"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtEmpleado"
+            android:textSize="16sp"
+            android:lines="1"
+            android:textStyle="bold"
+            android:id="@+id/txtCliente"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCliente"
+            android:textSize="16sp"
+            android:lines="1"
+            android:textStyle="bold"
+            android:id="@+id/txtFechaCadena"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtFechaCadena"
+            android:textSize="16sp"
+            android:lines="1"
+            android:textStyle="bold"
+            android:id="@+id/txtHoraInicioCadena"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtHoraInicioCadena"
+            android:textSize="16sp"
+            android:lines="1"
+            android:textStyle="bold"
+            android:id="@+id/txtHoraFinCadena"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

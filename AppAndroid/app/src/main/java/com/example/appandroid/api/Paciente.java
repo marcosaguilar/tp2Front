@@ -31,6 +31,9 @@ public class Paciente {
     @SerializedName("fechaNacimiento")
     @Expose
     private String fechaNacimiento;
+    @SerializedName("usuarioLogin")
+    @Expose
+    private String usuarioLogin;
 
     public Paciente() {
     }
@@ -107,6 +110,14 @@ public class Paciente {
         this.fechaNacimiento = fechaNacimiento;
     }
 
+    public String getUsuarioLogin() {
+        return usuarioLogin;
+    }
+
+    public void setUsuarioLogin(String usuarioLogin) {
+        this.usuarioLogin = usuarioLogin;
+    }
+
     @Override
     public String toString() {
         return "Paciente{" +
@@ -119,6 +130,7 @@ public class Paciente {
                 ", cedula='" + cedula + '\'' +
                 ", tipoPersona='" + tipoPersona + '\'' +
                 ", fechaNacimiento='" + fechaNacimiento + '\'' +
+                ", usuarioLogin='" + usuarioLogin + '\'' +
                 '}';
     }
 }

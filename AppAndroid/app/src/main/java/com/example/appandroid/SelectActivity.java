@@ -23,23 +23,23 @@ import retrofit2.Response;
 
 
 public class SelectActivity extends AppCompatActivity {
-    String value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
-        value = getIntent().getExtras().getString("usuario");
     }
 
     public void btnEventoAdministracionPacientes(View v) {
-            System.out.println("el valor es: " + value);
             Intent principalIntent=new Intent(this, FiltroPacienteActivity.class);
             startActivity(principalIntent);
     }
 
     public void btnEventoReservaTurnos(View v) {
-        Intent principalIntent=new Intent(this, PrincipalActivity.class);
+        Intent principalIntent=new Intent(this, FiltroReservaActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("user",getIntent().getExtras().getString("user"));
+        principalIntent.putExtras(bundle);
         startActivity(principalIntent);
     }
 

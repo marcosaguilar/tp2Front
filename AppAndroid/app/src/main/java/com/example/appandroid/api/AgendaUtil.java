@@ -3,7 +3,7 @@ package com.example.appandroid.api;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class PacienteUtil {
+public class AgendaUtil {
     private static Retrofit retrofit=null;
     private static String URL_BASE="https://equipoyosh.com/";
     public static Retrofit getClient(String baseUrl) {
@@ -16,8 +16,8 @@ public class PacienteUtil {
         return retrofit;
     }
 
-    public static PacienteService getPacienteService(){
-        return PacienteUtil.getClient(URL_BASE).create(PacienteService.class);
+    public static AgendaService getAgendaService(){
+        return AgendaUtil.getClient(URL_BASE).create(AgendaService.class);
     }
 
 }
