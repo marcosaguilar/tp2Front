@@ -25,4 +25,8 @@
     <string name="buscarHora">Buscar Hora</string>
     <string name="fechaDesde">Fecha Desde</string>
     <string name="fechaHasta">Fecha Hasta</string>
+    <string name="modificar">Modificar</string>
+    <string name="observacion">Observación</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="asistio">Asistio</string>
 </resources>

@@ -24,6 +24,7 @@
         <activity android:name=".ListaEmpleadoActivity" />
         <activity android:name=".ListaClienteActivity" />
         <activity android:name=".ListaAgendaActivity" />
+        <activity android:name=".ModificarReservaActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

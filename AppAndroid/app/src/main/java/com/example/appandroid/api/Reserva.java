@@ -4,6 +4,10 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Reserva {
+    @SerializedName("idReserva")
+    @Expose
+    private Integer idReserva;
+
     @SerializedName("fechaCadena")
     @Expose
     private String fechaCadena;
@@ -24,11 +28,32 @@ public class Reserva {
     @Expose
     private Persona idCliente;
 
+    @SerializedName("flagAsistio")
+    @Expose
+    private String flagAsistio;
+
+    @SerializedName("observacion")
+    @Expose
+    private String observacion;
+
+    @SerializedName("flagEstado")
+    @Expose
+    private String flagEstado;
+
+
 
 
     public Reserva() {
     }
 
+
+    public Integer getIdReserva() {
+        return idReserva;
+    }
+
+    public void setIdReserva(Integer idReserva) {
+        this.idReserva = idReserva;
+    }
 
     public String getFechaCadena() {
         return fechaCadena;
@@ -68,6 +93,30 @@ public class Reserva {
 
     public void setIdCliente(Persona idCliente) {
         this.idCliente = idCliente;
+    }
+
+    public String getFlagAsistio() {
+        return flagAsistio;
+    }
+
+    public void setFlagAsistio(String flagAsistio) {
+        this.flagAsistio = flagAsistio;
+    }
+
+    public String getObservacion() {
+        return observacion;
+    }
+
+    public void setObservacion(String observacion) {
+        this.observacion = observacion;
+    }
+
+    public String getFlagEstado() {
+        return flagEstado;
+    }
+
+    public void setFlagEstado(String flagEstado) {
+        this.flagEstado = flagEstado;
     }
 
     @Override

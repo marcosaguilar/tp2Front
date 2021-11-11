@@ -3,6 +3,7 @@ package com.example.appandroid;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -64,7 +65,23 @@ public class ReservasActivity extends AppCompatActivity {
                     public void onItemClick(Reserva reserva) {
                         //ir a la pagina con los datos del paciente cargado y dos botones,
                         // uno modificar y otro eliminar (no se si para el caso de pacientes)
-                        showToast(reserva.getIdCliente().getNombre());
+                        //showToast(reserva.getIdCliente().getNombre());
+
+                        Intent modificarReservaIntent=new Intent(ReservasActivity.this, ModificarReservaActivity.class);
+                        Bundle bundle=new Bundle();
+                        bundle.putString("user",getIntent().getExtras().getString("user"));
+                        bundle.putString("idReserva",reserva.getIdReserva().toString());
+                        bundle.putString("cliente",reserva.getIdCliente().getNombre());
+                        bundle.putString("empleado",reserva.getIdEmpleado().getNombre());
+                        bundle.putString("fecha",reserva.getFechaCadena());
+                        bundle.putString("horaInicio",reserva.getHoraInicioCadena());
+                        bundle.putString("horaFin",reserva.getHoraFinCadena());
+                        bundle.putString("observacion",reserva.getObservacion());
+                        bundle.putString("asistio",reserva.getFlagAsistio());
+                        bundle.putString("flagEstado",reserva.getFlagEstado());
+
+                        modificarReservaIntent.putExtras(bundle);
+                        startActivity(modificarReservaIntent);
                     }
                 });
                 rvReservas.setAdapter(adapterReserva);
