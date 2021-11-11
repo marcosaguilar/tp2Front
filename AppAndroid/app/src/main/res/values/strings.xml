@@ -23,4 +23,6 @@
     <string name="agregarCliente">Agregar Cliente</string>
     <string name="fecha">Fecha</string>
     <string name="buscarHora">Buscar Hora</string>
+    <string name="fechaDesde">Fecha Desde</string>
+    <string name="fechaHasta">Fecha Hasta</string>
 </resources>

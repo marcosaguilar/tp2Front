@@ -1,6 +1,7 @@
 package com.example.appandroid;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -52,7 +53,8 @@ public class ReservasActivity extends AppCompatActivity {
     }
 
     public void cargarReservas() {
-        Call<DatosReserva> callApi= ReservaUtil.getReservaService().obtenerReservasFiltro(getIntent().getExtras().getString("consulta"));
+        System.out.println("La consulta fue: " + getIntent().getExtras().getString("consulta"));
+        Call<DatosReserva> callApi= ReservaUtil.getReservaService().obtenerReservasFiltro(Uri.encode(getIntent().getExtras().getString("consulta")));
         callApi.enqueue(new Callback<DatosReserva>() {
             @Override
             public void onResponse(Call<DatosReserva> call, Response<DatosReserva> response) {

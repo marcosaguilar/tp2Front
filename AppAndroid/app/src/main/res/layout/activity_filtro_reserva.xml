@@ -8,18 +8,44 @@
     android:gravity="center"
     tools:context=".FiltroReservaActivity">
 
+        <Button
+            android:layout_width="200dp"
+
+            android:layout_height="wrap_content"
+            android:onClick="agregarFiltroEmpleadoReserva"
+            android:text="@string/agregarEmpleado"/>
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:lines="1"
+            android:textStyle="bold"
+            android:id="@+id/txtEmpleadoAgregarReserva"/>
+        <Button
+            android:layout_width="200dp"
+
+            android:layout_height="wrap_content"
+            android:onClick="agregarFiltroClienteReserva"
+            android:text="@string/agregarCliente"/>
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:lines="1"
+            android:textStyle="bold"
+            android:id="@+id/txtClienteAgregarReserva"/>
         <EditText
-            android:id="@+id/textNombreReserva"
+            android:id="@+id/txtFechaDesde"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="@string/nombre"/>
+            android:hint="@string/fechaDesde"/>
         <EditText
-            android:id="@+id/textApellidoReserva"
+            android:id="@+id/txtFechaHasta"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="@string/apellido"/>
+            android:hint="@string/fechaHasta"/>
         <Button
             android:layout_width="200dp"
             android:onClick="btnEventoFiltrarReserva"
