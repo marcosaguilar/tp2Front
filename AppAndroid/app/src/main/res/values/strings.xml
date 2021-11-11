@@ -31,4 +31,6 @@
     <string name="asistio">Asistio</string>
     <string name="agregarFisioterapeuta">Fisioterapeuta</string>
     <string name="agregarPaciente">Paciente</string>
+    <string name="agregarCategoria">Categoria</string>
+    <string name="agregarSubCategoria">Tipo Producto</string>
 </resources>

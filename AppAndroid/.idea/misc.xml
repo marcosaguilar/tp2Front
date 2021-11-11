@@ -10,7 +10,9 @@
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/activity_filtro_paciente.xml" value="0.2171875" />
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/activity_filtro_reserva.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/activity_lista_agenda.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/activity_lista_categoria.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/activity_lista_empleado.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/activity_lista_subcategoria.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/activity_modificar_reserva.xml" value="0.2171875" />
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/activity_new_ficha.xml" value="0.20520833333333333" />
@@ -24,9 +26,11 @@
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/item.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/itemPaciente.xml" value="0.2171875" />
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/item_agenda.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/item_categoria.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/item_ficha.xml" value="0.2171875" />
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/item_paciente.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/item_reserva.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/layout/item_subcategoria.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/pcmarcos/Documents/facultad/2021/front/segunda etapa/proyectos/tp2Front/AppAndroid/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
       </map>
     </option>

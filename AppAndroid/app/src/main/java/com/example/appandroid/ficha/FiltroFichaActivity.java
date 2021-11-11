@@ -20,6 +20,8 @@ import java.util.ArrayList;
 public class FiltroFichaActivity extends AppCompatActivity {
     TextView fisioterapeutaFiltrar;
     TextView pacienteFiltrar;
+    TextView categoriaFiltrar;
+    TextView subCategoriaFiltrar;
     EditText fechaDesde;
     EditText fechaHasta;
     String consulta = "";
@@ -28,6 +30,8 @@ public class FiltroFichaActivity extends AppCompatActivity {
 
     PersonaId idEmpleado = new PersonaId();
     PersonaId idCliente= new PersonaId();
+    Categoria categoria = new Categoria();
+    SubCategoria subCategoria = new SubCategoria();
 
 
     @Override
@@ -38,6 +42,8 @@ public class FiltroFichaActivity extends AppCompatActivity {
         fechaHasta=findViewById(R.id.txtFechaHastaFicha);
         fisioterapeutaFiltrar=findViewById(R.id.txtFisioterapeutaFiltrar);
         pacienteFiltrar=findViewById(R.id.txtPacienteFiltrar);
+        categoriaFiltrar=findViewById(R.id.txtCategoriaFiltrar);
+        subCategoriaFiltrar=findViewById(R.id.txtSubCategoriaFiltrar);
     }
 
     public void agregarFiltroEmpleadoFicha(View view) {
@@ -48,6 +54,27 @@ public class FiltroFichaActivity extends AppCompatActivity {
     public void agregarFiltroClienteFicha(View view) {
         Intent intentEmpleado=new Intent(this, ListaClienteActivity.class);
         startActivityForResult(intentEmpleado, 3);
+    }
+
+    public void agregarFiltroCategoriaFicha(View view) {
+        Intent intentEmpleado=new Intent(this, ListaCategoriaActivity.class);
+        startActivityForResult(intentEmpleado, 4);
+    }
+
+    public void agregarFiltroSubCategoriaFicha(View view) {
+        Intent intentEmpleado=new Intent(this, ListaSubCategoriaActivity.class);
+        if(categoria.getIdCategoria() != null){
+            Bundle bundle=new Bundle();
+            bundle.putInt("categoria",categoria.getIdCategoria());
+            intentEmpleado.putExtras(bundle);
+            System.out.println("if: 1");
+        }else{
+            Bundle bundle=new Bundle();
+            bundle.putInt("categoria",-1);
+            intentEmpleado.putExtras(bundle);
+            System.out.println("if: 2");
+        }
+        startActivityForResult(intentEmpleado, 5);
     }
 
     public void btnEventoFiltrarFicha(View v) {
@@ -64,6 +91,13 @@ public class FiltroFichaActivity extends AppCompatActivity {
                 consulta=consulta+',';
             }
             consulta=consulta+"\"idEmpleado\":{\"idPersona\":" + idEmpleado.getIdPersona() + "}";
+        }
+        if(subCategoria.getIdCategoria()!=null){
+            //si el filtro no esta vacio agrega la coma
+            if(!consulta.equals("")){
+                consulta=consulta+',';
+            }
+            consulta=consulta+"\"idTipoProducto\":{\"idTipoProducto\":" + subCategoria.getIdTipoProducto() + "}";
         }
         if(!fechaDesde.getText().toString().equals("")){
             //si el filtro no esta vacio agrega la coma
@@ -109,6 +143,24 @@ public class FiltroFichaActivity extends AppCompatActivity {
                     // TODO Extract the data returned from the child Activity.
                     idCliente.setIdPersona(data.getIntExtra("idPersona", -1));
                     pacienteFiltrar.setText(data.getStringExtra("nombre"));
+                    //Toast.makeText(this, returnValue.toString(), Toast.LENGTH_SHORT).show();
+                }
+                break;
+            }
+            case (4) : {
+                if (resultCode == ListaCategoriaActivity.RESULT_OK) {
+                    // TODO Extract the data returned from the child Activity.
+                    categoria.setIdCategoria(data.getIntExtra("idCategoria", -1));
+                    categoriaFiltrar.setText(data.getStringExtra("descripcion"));
+                    //Toast.makeText(this, returnValue.toString(), Toast.LENGTH_SHORT).show();
+                }
+                break;
+            }
+            case (5) : {
+                if (resultCode == ListaSubCategoriaActivity.RESULT_OK) {
+                    // TODO Extract the data returned from the child Activity.
+                    subCategoria.setIdTipoProducto(data.getIntExtra("idSubCategoria", -1));
+                    subCategoriaFiltrar.setText(data.getStringExtra("descripcion"));
                     //Toast.makeText(this, returnValue.toString(), Toast.LENGTH_SHORT).show();
                 }
                 break;
