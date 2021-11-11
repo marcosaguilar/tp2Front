@@ -15,6 +15,7 @@ import com.example.appandroid.api.AdapterUsuario;
 import com.example.appandroid.api.Datos;
 import com.example.appandroid.api.RetrofitUtil;
 import com.example.appandroid.api.Usuario;
+import com.example.appandroid.ficha.FiltroFichaActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import retrofit2.Call;
@@ -44,7 +45,10 @@ public class SelectActivity extends AppCompatActivity {
     }
 
     public void btnEventoFichaClinica(View v) {
-        Intent principalIntent=new Intent(this, PrincipalActivity.class);
+        Intent principalIntent=new Intent(this, FiltroFichaActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("user",getIntent().getExtras().getString("user"));
+        principalIntent.putExtras(bundle);
         startActivity(principalIntent);
     }
 }

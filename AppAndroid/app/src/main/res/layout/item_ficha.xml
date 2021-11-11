@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="6dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/txtEmpleadoFicha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:lines="1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtEmpleadoFicha"
+            android:textSize="16sp"
+            android:lines="1"
+            android:textStyle="bold"
+            android:id="@+id/txtClienteFicha"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtClienteFicha"
+            android:textSize="16sp"
+            android:lines="1"
+            android:textStyle="bold"
+            android:id="@+id/txtFechaCadenaFicha"/>
+
+        <TextView
+            android:id="@+id/txtConsultaFicha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtFechaCadenaFicha"
+            android:lines="1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtHoraInicioCadenaFicha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtFechaCadenaFicha"
+            android:lines="1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtMotivoFicha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtFechaCadenaFicha"
+            android:lines="1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtDiagnosticoFicha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMotivoFicha"
+            android:lines="1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtObservacionFicha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDiagnosticoFicha"
+            android:lines="1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

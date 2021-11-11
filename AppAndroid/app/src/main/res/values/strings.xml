@@ -29,4 +29,6 @@
     <string name="observacion">Observación</string>
     <string name="cancelar">Cancelar</string>
     <string name="asistio">Asistio</string>
+    <string name="agregarFisioterapeuta">Fisioterapeuta</string>
+    <string name="agregarPaciente">Paciente</string>
 </resources>
